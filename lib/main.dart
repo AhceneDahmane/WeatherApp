@@ -1,16 +1,19 @@
 import 'package:flutter/material.dart';
-import 'package:weatherapp/pages/weather_page.dart';
+import 'pages/weather_page.dart'; // Adjust the import path as needed
 
 void main() {
-  runApp(const MyApp());
+  runApp(MyApp());
 }
 
 class MyApp extends StatelessWidget {
-  const MyApp({super.key});
   @override
   Widget build(BuildContext context) {
-    return const MaterialApp(
-      debugShowCheckedModeBanner: false,
+    return MaterialApp(
+      title: 'Flutter Weather App',
+      theme: ThemeData(
+        primarySwatch: Colors.blue,
+        visualDensity: VisualDensity.adaptivePlatformDensity,
+      ),
       home: WeatherPage(),
     );
   }
